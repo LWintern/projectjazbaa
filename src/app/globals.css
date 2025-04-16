@@ -101,3 +101,25 @@
     transform: translateX(calc(-50%));
   }
 }
+
+
+
+
+
+
+
+
+@keyframes tilt {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(45deg) scale3d(1, 1, 1);
+  }
+}
+
+* {
+  transition: transform 0.3s ease-out;
+}
+
+/* Optional: Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}

@@ -270,7 +270,7 @@ export default function CareerSchools() {
           </div>
         </div>
 
-        <div className="relative max-w-4xl mx-auto mt-60">
+        <div className="relative max-w-4xl mx-auto mt-60 md:mt-10 lg:mt-10">
           <CenterDetailsCard details={sortedCards[activeCardIndex].centerDetails} />
         </div>
       </div>
