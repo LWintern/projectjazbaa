@@ -1,34 +1,27 @@
+
+
+
+
+
+ 
+// components/CareerSchools.tsx
 "use client"
 
 import { useState, useEffect } from "react"
 import Image from "next/legacy/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Laptop, Code, Lightbulb, PresentationIcon } from "lucide-react"
+import { Mail } from "lucide-react"
+import { cardData } from "../../../../../data/journeyData"
 
-// Interfaces
-interface CardData {
-  icon: React.ReactNode;
-  title: string;
-  position: number;
-  customPosition: {
-    top?: string;
-    left?: string;
-    right?: string;
-    bottom?: string;
-    translateX?: string;
-    translateY?: string;
-  };
-  mobilePosition: {
-    top?: string;
-    left?: string;
-    right?: string;
-    bottom?: string;
-    translateX?: string;
-    translateY?: string;
-  };
-  className?: string;
-  centerDetails: CenterDetails;
+// Define interfaces locally
+interface Position {
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  translateX?: string;
+  translateY?: string;
 }
 
 interface CenterDetails {
@@ -39,84 +32,28 @@ interface CenterDetails {
   description: string;
 }
 
-// Card Data
-const cardData: CardData[] = [
-  {
-    icon: <Lightbulb className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
-    title: "Learn",
-    position: 0,
-    customPosition: {
-      top: "11%",
-      left: "26%",
-      translateY: "-20px"
-    },
-    mobilePosition: {
-      top: "5%",
-      left: "50%",
-      translateX: "-50%",
-      translateY: "0"
-    },
-    className: "absolute",
-    centerDetails: {
-      name: "Linux World Training Center",
-      address: "Tech Hub, Innovation Park, Sector 15, Bangalore - Karnataka - India",
-      email: "training@linuxworld.com",
-      image: "/images/training-center.jpg",
-      description: "Specialized training in Linux system administration, cloud computing, and DevOps practices."
-    }
-  },
-  {
-    icon: <Laptop className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
-    title: "Build",
-    position: 1,
-    customPosition: {
-      top: "63%",
-      left: "60%",
-      translateX: "-50%",
-      translateY: "-50%"
-    },
-    mobilePosition: {
-      top: "35%",
-      left: "50%",
-      translateX: "-50%",
-      translateY: "0"
-    },
-    className: "absolute",
-    centerDetails: {
-      name: "Linux World Development Hub",
-      address: "Innovation Tower, Tech Valley, Sector 21, Pune - Maharashtra - India",
-      email: "devops@linuxworld.com",
-      image: "/images/dev-hub.jpg",
-      description: "Advanced DevOps training and implementation of CI/CD pipelines and container orchestration."
-    }
-  },
-  {
-    icon: <PresentationIcon className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
-    title: "Present",
-    position: 2,
-    customPosition: {
-      top: "-15%",
-      right: "0%",
-      translateY: "-20px"
-    },
-    mobilePosition: {
-      top: "65%",
-      left: "50%",
-      translateX: "-50%",
-      translateY: "0"
-    },
-    className: "absolute",
-    centerDetails: {
-      name: "Linux World Cloud Center",
-      address: "Cloud Park, Digital Zone, Sector 63, Gurugram - Haryana - India",
-      email: "cloud@linuxworld.com",
-      image: "/images/cloud-center.jpg",
-      description: "Comprehensive cloud infrastructure training and implementation using leading platforms."
-    }
-  }
-];
+interface CardData {
+  icon: JSX.Element;
+  title: string;
+  position: number;
+  customPosition: Position;
+  mobilePosition: Position;
+  className?: string;
+  centerDetails: CenterDetails;
+}
 
-// ProcessCard Component
+// Update ProcessCardProps
+interface ProcessCardProps {
+  icon: JSX.Element;
+  title: string;
+  customPosition: Position;
+  mobilePosition: Position;
+  className?: string;
+  onClick: () => void;
+  isActive: boolean;
+}
+
+// Rest of your component code remains the same...
 const ProcessCard = ({ 
   icon, 
   title, 
@@ -125,10 +62,7 @@ const ProcessCard = ({
   className = "", 
   onClick,
   isActive 
-}: CardData & { 
-  onClick: () => void;
-  isActive: boolean;
-}) => {
+}: ProcessCardProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -141,19 +75,20 @@ const ProcessCard = ({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const positionStyle = {
-    ...(isMobile ? mobilePosition : customPosition),
-    transform: `translate(${
-      (isMobile ? mobilePosition?.translateX : customPosition?.translateX) || '0'
-    }, ${
-      (isMobile ? mobilePosition?.translateY : customPosition?.translateY) || '0'
-    })`
+  const position = isMobile ? mobilePosition : customPosition;
+  const styles = {
+    ...position,
+    transform: `translate(${position?.translateX || '0'}, ${position?.translateY || '0'})`
   };
 
   return (
     <div 
-      className={`w-[80px] sm:w-[100px] cursor-pointer ${className}`}
-      style={positionStyle}
+      className={`
+        w-[80px] sm:w-[100px] cursor-pointer
+        ${isMobile ? 'static' : 'absolute'}
+        ${className}
+      `}
+      style={styles}
       onClick={onClick}
     >
       <Card className={`bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg ${
@@ -172,23 +107,33 @@ const ProcessCard = ({
   );
 };
 
-// CenterDetailsCard Component
 const CenterDetailsCard = ({ details }: { details: CenterDetails }) => (
   <Card className="bg-white rounded-xl overflow-hidden shadow-lg">
-    <CardContent className="p-4 sm:p-6 md:p-8">
-      <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-        <div>
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2 sm:mb-4">
+    <CardContent className="p-4">
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="md:order-2 relative h-[200px] sm:h-[240px] md:h-[300px] rounded-lg overflow-hidden">
+          <Image
+            src={details.image}
+            alt={details.name}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+            priority
+          />
+        </div>
+
+        <div className="md:order-1">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
             {details.name}
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-2 sm:mb-4">
+          <p className="text-sm sm:text-base text-gray-600 mb-2">
             {details.description}
           </p>
-          <p className="text-sm sm:text-base text-gray-600 mb-2 sm:mb-4">
+          <p className="text-sm sm:text-base text-gray-600 mb-2">
             {details.address}
           </p>
 
-          <Button variant="outline" className="mb-4 sm:mb-6 text-sm sm:text-base">
+          <Button variant="outline" className="mb-4 text-sm sm:text-base">
             <span className="mr-2">Get Direction</span>
             <svg 
               width="12" 
@@ -205,7 +150,7 @@ const CenterDetailsCard = ({ details }: { details: CenterDetails }) => (
             </svg>
           </Button>
 
-          <div className="flex items-center mb-4 sm:mb-6">
+          <div className="flex items-center mb-4">
             <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-gray-500" />
             <a 
               href={`mailto:${details.email}`}
@@ -215,7 +160,7 @@ const CenterDetailsCard = ({ details }: { details: CenterDetails }) => (
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-2 sm:gap-3">
+          <div className="flex flex-wrap gap-2">
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-sm sm:text-base">
               Schedule Consultation
             </Button>
@@ -224,23 +169,11 @@ const CenterDetailsCard = ({ details }: { details: CenterDetails }) => (
             </Button>
           </div>
         </div>
-
-        <div className="relative h-[200px] sm:h-[240px] md:h-[300px] rounded-lg overflow-hidden mt-4 md:mt-0">
-          <Image
-            src={details.image}
-            alt={details.name}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-            priority
-          />
-        </div>
       </div>
     </CardContent>
   </Card>
 );
 
-// Main Component
 export default function CareerSchools() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -257,7 +190,7 @@ export default function CareerSchools() {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative w-full h-[950px] md:min-h-screen lg:min-h-screen">
       <div className="absolute top-0 left-0 w-full h-[80%] bg-blue-900">
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -273,8 +206,8 @@ export default function CareerSchools() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full py-8 sm:py-12 px-4">
-        <div className="relative text-center mb-8 sm:mb-12">
+      <div className="relative z-10 w-full py-8 px-4">
+        <div className="text-center mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
             Our Training Programs
           </h1>
@@ -283,8 +216,21 @@ export default function CareerSchools() {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto mb-8 sm:mb-12 h-[400px] sm:h-[300px]">
-          {!isMobile && (
+        <div className="relative max-w-5xl mx-auto mb-8">
+          <div className="md:hidden">
+            <div className="flex justify-around mb-8">
+              {sortedCards.map((card, index) => (
+                <ProcessCard
+                  key={index}
+                  {...card}
+                  onClick={() => setActiveCardIndex(index)}
+                  isActive={activeCardIndex === index}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden md:block relative h-[300px]">
             <svg
               className="absolute top-0 left-0 w-full h-full z-0"
               viewBox="0 0 1000 200"
@@ -307,43 +253,7 @@ export default function CareerSchools() {
                 opacity="0.3"
               />
             </svg>
-          )}
 
-          {isMobile && (
-            <svg
-              className="absolute top-0 left-1/2 h-full w-[2px] z-0 -translate-x-1/2"
-              viewBox="0 0 2 400"
-              preserveAspectRatio="none"
-            >
-              <line
-                x1="1"
-                y1="0"
-                x2="1"
-                y2="400"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="5,5"
-                opacity="0.3"
-              />
-            </svg>
-          )}
-
-          {!isMobile ? (
-            <>
-              <div className="absolute top-[40%] left-[4%] w-3 h-3 sm:w-4 sm:h-4 bg-blue-200 rounded-full -translate-y-1/2 z-10"></div>
-              <div className="absolute top-[67%] left-[30%] w-3 h-3 sm:w-4 sm:h-4 bg-blue-200 rounded-full -translate-y-1/2 z-10"></div>
-              <div className="absolute top-[32%] left-[60%] w-3 h-3 sm:w-4 sm:h-4 bg-white border-2 border-blue-200 rounded-full -translate-x-1/2 -translate-y-1/2 z-10"></div>
-              <div className="absolute top-[40%] right-[4%] w-3 h-3 sm:w-4 sm:h-4 bg-blue-200 rounded-full -translate-y-1/2 z-10"></div>
-            </>
-          ) : (
-            <>
-              <div className="absolute top-[10%] left-1/2 w-3 h-3 bg-blue-200 rounded-full -translate-x-1/2 z-10"></div>
-              <div className="absolute top-[40%] left-1/2 w-3 h-3 bg-blue-200 rounded-full -translate-x-1/2 z-10"></div>
-              <div className="absolute top-[70%] left-1/2 w-3 h-3 bg-blue-200 rounded-full -translate-x-1/2 z-10"></div>
-            </>
-          )}
-
-          <div className="relative w-full h-full">
             {sortedCards.map((card, index) => (
               <ProcessCard
                 key={index}
@@ -352,13 +262,18 @@ export default function CareerSchools() {
                 isActive={activeCardIndex === index}
               />
             ))}
+
+            <div className="absolute top-[40%] left-[4%] w-4 h-4 bg-blue-200 rounded-full -translate-y-1/2"></div>
+            <div className="absolute top-[67%] left-[30%] w-4 h-4 bg-blue-200 rounded-full -translate-y-1/2"></div>
+            <div className="absolute top-[32%] left-[60%] w-4 h-4 bg-white border-2 border-blue-200 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-[40%] right-[4%] w-4 h-4 bg-blue-200 rounded-full -translate-y-1/2"></div>
           </div>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto mt-60">
           <CenterDetailsCard details={sortedCards[activeCardIndex].centerDetails} />
         </div>
       </div>
     </div>
-  )
+  );
 }
