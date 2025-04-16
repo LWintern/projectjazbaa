@@ -1,0 +1,35 @@
+import Navbar from './components/customComponents/figma/Navbar'
+import { TeamGrid } from './components/customComponents/figma/TakingJazbaaToNextLevel'
+import { TransformationStories } from './components/customComponents/figma/TransformationStories'
+import ProcessFlow from './components/customComponents/figma/ProcessFlow'
+import JazbaaVersions from './components/customComponents/figma/JazbaaVersions'
+import AboutLinuxWorld from './components/customComponents/figma/AboutLinuxWorld'
+import InvestorsSection from './components/customComponents/figma/InvesterSection'
+import EnhancedMasonryGallery from './components/customComponents/figma/MasonaryGallary'
+import Footer from './components/customComponents/figma/Footer'
+import Footer2 from './components/customComponents/figma/Footer2'
+
+
+
+export default function Home() {
+  return (
+   <>
+
+  <Navbar />
+  <EnhancedMasonryGallery />
+  <TeamGrid />
+<InvestorsSection />
+  <TransformationStories />
+  <ProcessFlow/>
+  <AboutLinuxWorld ></AboutLinuxWorld>
+  
+  <JazbaaVersions />
+   
+  
+  
+  
+  <Footer2 />
+  <Footer />
+   </>
+  )
+}
