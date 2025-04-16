@@ -8,7 +8,7 @@ import InvestorsSection from './components/customComponents/figma/InvesterSectio
 import EnhancedMasonryGallery from './components/customComponents/figma/MasonaryGallary'
 import Footer from './components/customComponents/figma/Footer'
 import Footer2 from './components/customComponents/figma/Footer2'
-
+import StartupCarousel from './components/customComponents/figma/StartupCarousel'
 
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
    <>
 
   <Navbar />
+  <StartupCarousel/>
   <EnhancedMasonryGallery />
   <TeamGrid />
 <InvestorsSection />
