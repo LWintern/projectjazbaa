@@ -135,7 +135,7 @@ export default function InvestorsSection() {
                   {duplicatedImages.map((image, index) => (
                     <div
                       key={`image-${index}`}
-                      className={`relative w-[120px] flex-shrink-0 h-[400px] md:w-[140px] md:h-[300px] overflow-hidden rounded-[60px] mx-2 cursor-pointer transition-transform hover:scale-105 
+                      className={`relative w-[120px] flex-shrink-0 h-[400px] md:w-[110px] md:h-[290px] overflow-hidden rounded-[60px] mx-2 cursor-pointer transition-transform hover:scale-105 
                       ${image.position === 'up' ? 'transform -translate-y-16' : 'transform translate-y-16'}
                       ${image.bgColor}`}
                       onClick={() => setSelectedImage(image.src)}
@@ -144,7 +144,7 @@ export default function InvestorsSection() {
                         src={image.src || "/placeholder.svg"} 
                         alt={image.alt} 
                         fill 
-                        className="object-cover bg-red-200" 
+                        className="object-contain bg-red-200" 
                       />
                     </div>
                   ))}

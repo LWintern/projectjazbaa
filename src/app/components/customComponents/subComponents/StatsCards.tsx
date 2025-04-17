@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { StatItem } from "../../../../../data/statsData";
+import { StatItem } from "..//../../../../data/statsData";
 
 interface StatCardProps {
   stat: StatItem;
@@ -19,21 +19,33 @@ export const StatCard = ({ stat, index }: StatCardProps) => {
       viewport={{ once: true }}
       className="flex items-center"
     >
-      <Card className="w-full bg-transparent border-none hover:bg-white/5 transition-all duration-300">
-        <div className="p-10">
-          <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center min-w-[100px]">
-              <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
-                {stat.number}
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl md:text-3xl font-light text-white">
+      <Card className="w-full h-[200px] relative overflow-hidden group border-none">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={stat.image || `/images/stats-bg-${index + 1}.jpg`}
+            alt=""
+            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 h-full p-6 flex items-center">
+          <div className="flex items-baseline gap-6">
+            <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight">
+              {stat.number}
+            </span>
+            <div className="flex flex-col gap-2">
+              <span className="text-2xl sm:text-3xl md:text-4xl font-light text-white/90">
                 {stat.label}
               </span>
-              <span className="text-sm sm:text-base text-gray-400 mt-2">
-                {stat.description}
-              </span>
+              {stat.description && (
+                <span className="text-sm sm:text-base text-gray-300">
+                  {stat.description}
+                </span>
+              )}
             </div>
           </div>
         </div>
