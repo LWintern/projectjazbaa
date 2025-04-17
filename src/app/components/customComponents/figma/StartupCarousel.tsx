@@ -113,7 +113,7 @@ export default function StartupCarousel() {
   return (
     <div className="w-full bg-black py-12 overflow-hidden">
        <h2 className="text-4xl text-white font-bold text-center mb-12">
-      50+ AI startups Showcased @ Jazbaa 3.0
+      50+ AI STARTUP SHOWCASED @ JAZBAA 3.0
     </h2>
       {/* First row - moving right */}
       <div className="relative mb-16">

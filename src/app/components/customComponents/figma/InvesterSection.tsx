@@ -7,27 +7,100 @@ export default function InvestorsSection() {
 
   const investorImages = [
     {
-      src: "/placeholder.svg?height=400&width=200",
+      src: "/assets/investors/Artboard 1 copy 2.png",
       alt: "Nature landscape",
       position: "down",
       bgColor: "bg-pink-200"
     },
     {
-      src: "/placeholder.svg?height=400&width=200",
+      src: "/assets/investors/Artboard 1 copy 3.png",
       alt: "White tiger",
       position: "up",
       bgColor: "bg-blue-200"
     },
     {
-      src: "/placeholder.svg?height=400&width=200",
+      src: "/assets/investors/Artboard 1 copy 4.png",
       alt: "Colorful parrot",
       position: "down",
       bgColor: "bg-gray-200"
     },
     {
-      src: "/placeholder.svg?height=400&width=200",
+      src: "/assets/investors/Artboard 1 copy 5.png",
       alt: "Prairie dog",
       position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 6.png",
+      alt: "Prairie dog",
+      position: "down",
+      bgColor: "bg-yellow-200"
+    },
+
+    {
+      src: "/assets/investors/Artboard 1 copy 7.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 9.png",
+      alt: "Prairie dog",
+      position: "down",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 10.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 11.png",
+      alt: "Prairie dog",
+      position: "down",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 12.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 13.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 14.png",
+      alt: "Prairie dog",
+      position: "down",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 15.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy 16.png",
+      alt: "Prairie dog",
+      position: "down",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1 copy.png",
+      alt: "Prairie dog",
+      position: "up",
+      bgColor: "bg-yellow-200"
+    },
+    {
+      src: "/assets/investors/Artboard 1.png",
+      alt: "Prairie dog",
+      position: "down",
       bgColor: "bg-yellow-200"
     },
   ]
