@@ -26,13 +26,13 @@ export default function Home() {
   <ProcessFlow/>
   <AboutLinuxWorld ></AboutLinuxWorld>
   
-  <JazbaaStats />
+  {/* <JazbaaStats /> */}
    
   
   
   
   <Footer2 />
-  <Footer />
+  {/* <Footer /> */}
    </>
   )
 }
