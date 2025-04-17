@@ -1,4 +1,4 @@
-// components/StatCard.tsx
+// components/subComponents/StatsCards.tsx
 "use client"
 
 import { motion } from "framer-motion";
@@ -17,16 +17,25 @@ export const StatCard = ({ stat, index }: StatCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
       viewport={{ once: true }}
-      className="flex items-center space-x-8"
+      className="flex items-center"
     >
-      <Card className="w-full bg-red-100 border-none hover:bg-white/5 transition-colors duration-300">
-        <div className="flex items-baseline justify-between sm:justify-start p-10">
-          <span className="text-4xl sm:text-7xl font-bold text-white tracking-tight">
-            {stat.number}
-          </span>
-          <span className="text-2xl sm:text-5xl font-light text-white ml-4">
-            {stat.label}
-          </span>
+      <Card className="w-full bg-transparent border-none hover:bg-white/5 transition-all duration-300">
+        <div className="p-10">
+          <div className="flex items-start gap-4">
+            <div className="flex items-center justify-center min-w-[100px]">
+              <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+                {stat.number}
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl sm:text-2xl md:text-3xl font-light text-white">
+                {stat.label}
+              </span>
+              <span className="text-sm sm:text-base text-gray-400 mt-2">
+                {stat.description}
+              </span>
+            </div>
+          </div>
         </div>
       </Card>
     </motion.div>
