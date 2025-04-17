@@ -14,7 +14,7 @@ const teamMembers: TeamMember[] = [
     id: "1",
     name: "Name",
     jobTitle: "Job title",
-    imageUrl: "/team-1.jpg", // Replace with your image paths
+    imageUrl: "/assets/transformation/WhatsApp Image 2024-03-16 at 1.31.04 PM.jpeg", // Replace with your image paths
   },
   {
     id: "2",
