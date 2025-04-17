@@ -198,6 +198,7 @@ export default function EnhancedMasonryGallery() {
       alt: "Person with camera",
       className: "h-[300px]", // Medium
     },
+    
   ]
 
   const handleMouseMove = (
