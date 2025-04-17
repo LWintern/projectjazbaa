@@ -129,9 +129,9 @@ const StoryCard = ({
 
 export function TransformationStories() {
   return (
-    <div className="w-full bg-white py-12">
+    <div className="w-full bg-black py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
           Transformation stories
         </h2>
 

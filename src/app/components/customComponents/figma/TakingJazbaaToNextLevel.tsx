@@ -82,8 +82,12 @@ const TeamMemberCard = ({
 
 export function TeamGrid() {
   return (
-    <div className="container mx-auto px-4 py-6 sm:p-6">
+    <div className="container bg-black mx-auto px-4 py-6 sm:p-6">
+       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
+          TAKING JAZBAA TO NATIONAL LEVEL
+        </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+     
         {/* Left large card */}
         <div className="relative">
           <TeamMemberCard

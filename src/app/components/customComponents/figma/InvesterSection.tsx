@@ -37,9 +37,9 @@ export default function InvestorsSection() {
   return (
     <>
       {/* Increased height using min-h-screen or h-[800px] */}
-      <section className="w-full bg-gray-200 text-white overflow-hidden ">
+      <section className="w-full bg-black text-white overflow-hidden ">
         <div className="max-w-6xl mx-auto px-4 py-4"> {/* Increased padding */}
-          <div className="bg-gray-200 rounded-lg p-8 text-black h-full">
+          <div className="bg-black rounded-lg p-8 text-white h-full">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-10"> {/* Increased margin */}
               Investors & dignitaries @ jazbaa 1.0 | 2.0 | 3.0
             </h3>

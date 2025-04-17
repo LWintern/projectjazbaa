@@ -91,7 +91,7 @@ const ProcessCard = ({
       style={styles}
       onClick={onClick}
     >
-      <Card className={`bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+      <Card className={`bg-black rounded-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg ${
         isActive ? 'ring-2 ring-emerald-600 shadow-lg' : 'shadow-md'
       }`}>
         <CardContent className="p-0">
@@ -191,7 +191,7 @@ export default function CareerSchools() {
 
   return (
     <div className="relative w-full h-[950px] md:min-h-screen lg:min-h-screen">
-      <div className="absolute top-0 left-0 w-full h-[80%] bg-red-500 ">
+      <div className="absolute top-0 left-0 w-full h-[80%] bg-[#ff0000] ">
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
