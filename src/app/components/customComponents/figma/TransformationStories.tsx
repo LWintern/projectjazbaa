@@ -25,15 +25,11 @@ const cardConfigs: CardConfig[] = [
     position: 'bottom',
     contents: [
       {
-        title: "Top - Notch angel investors",
-        description: "Top - Notch angel investors from various cities namely mumbai, banglore, hyderabadand grugram were present at jazbaa 1.0&2.0",
+        title: "DEEPAK MAURYA ",
+        description: "FOUNDER OF STARTUP - POKET SHIP",
         imageUrl: "/card1-image1.jpg"
       },
-      {
-        title: "Another Story",
-        description: "Different description for card 1",
-        imageUrl: "/card1-image2.jpg"
-      },
+    
       // Add more content items for card 1
     ]
   },
@@ -42,15 +38,11 @@ const cardConfigs: CardConfig[] = [
     position: 'middle',
     contents: [
       {
-        title: "Top - Notch angel investors",
-        description: "Top - Notch angel investors from various cities namely mumbai, banglore, hyderabadand grugram were present at jazbaa 1.0&2.0",
+        title: "LAKSHYA JAIN",
+        description: "FOUNDER OF STARTUP - KEPLR",
         imageUrl: "/card2-image1.jpg"
       },
-      {
-        title: "- Notch angel investors",
-        description: "Top - Notch angel investors from various cities namely mumbai, banglore, hyderabadand grugram were present at jazbaa 1.0&2.0",
-        imageUrl: "/card2-image1.jpg"
-      },
+    
       // Add more content items for card 2
     ]
   },
@@ -59,15 +51,11 @@ const cardConfigs: CardConfig[] = [
     position: 'bottom',
     contents: [
       {
-        title: "Top - Notch angel investors",
-        description: "Top - Notch angel investors from various cities namely mumbai, banglore, hyderabadand grugram were present at jazbaa 1.0&2.0",
+        title: "ABHISHEK KHANDAL",
+        description: "Summer Intern listed at Forbes 30 under 30",
         imageUrl: "/card3-image1.jpg"
       },
-      {
-        title: "Final Story",
-        description: "Different description for card 3",
-        imageUrl: "/card3-image2.jpg"
-      },
+     
       // Add more content items for card 3
     ]
   }

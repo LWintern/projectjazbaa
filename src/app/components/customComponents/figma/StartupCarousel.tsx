@@ -14,10 +14,12 @@ export default function StartupCarousel() {
 
   useEffect(() => {
     const animateCarousel = () => {
-      // Both rows now move in the same direction
+      // First row moves right
       setPosition1(prev => (prev + 0.15) % 100);
+      // Second row moves left
       setPosition2(prev => (prev + 0.15) % 100);
     };
+
     const interval = setInterval(animateCarousel, 50);
     return () => clearInterval(interval);
   }, []);
@@ -66,7 +68,10 @@ export default function StartupCarousel() {
       color: "#FF0000"
     },
    
+
+
   ];
+
   const secondRowLogos: LogoItem[] = [
     {
       name: "Gravityos",
@@ -100,6 +105,7 @@ export default function StartupCarousel() {
       tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
     },
+
     {
       name: "Mystig",
       logo: "/assets/Startup/Mystig.png.jpg",
@@ -175,6 +181,7 @@ export default function StartupCarousel() {
     
   ];
 
+
   const renderLogoItem = (item: LogoItem, index: number) => (
     <div className="flex flex-col items-center mx-8" key={`${item.name}-${index}`}>
       <div className="bg-white p-4 w-32 h-32 flex items-center justify-center mb-2">
@@ -208,11 +215,12 @@ export default function StartupCarousel() {
           {duplicatedFirstRow.map((item, index) => renderLogoItem(item, index))}
         </div>
       </div>
-      {/* Second row - now also moving right (same direction as first row) */}
+
+      {/* Second row - moving left */}
       <div className="relative">
         <div 
           className="flex whitespace-nowrap transition-transform duration-300"
-          style={{ transform: `translateX(-${position2}%)` }}
+          style={{ transform: `translateX(${position2}%)` }}
         >
           {duplicatedSecondRow.map((item, index) => renderLogoItem(item, index))}
         </div>

@@ -156,7 +156,7 @@ export function TeamGrid() {
   }, [currentIndex]);
 
   return (
-    <div className="container bg-black mx-auto px-4 py-6 sm:p-6">
+    <div className="container bg-black mx-auto px-4 py-6 sm:p-6 bg-black">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
         TAKING JAZBAA TO NATIONAL LEVEL
       </h2>
