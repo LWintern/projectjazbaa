@@ -17,7 +17,7 @@ export default function EnhancedMasonryGallery() {
 
   const galleryImages: GalleryImage[] = [
     {
-      src: "/placeholder.svg?height=400&width=300",
+      src: "/assets/gallery/IMG_6557.JPG",
       alt: "People at event 1",
       className: "h-[400px]", // Tall
     },
