@@ -44,50 +44,141 @@ export default function StartupCarousel() {
       color: "#FF0000"
     },
     {
-      name: "Emanate",
-      logo: "/assets/Startup/Emanate.png.jpeg",
+      name: "dhvani",
+      logo: "/assets/Startup/dhvani.png.jpg",
       tagline: "My own insta.",
       color: "#FF0000"
     },
     {
-      name: "GullyKart",
-      logo: "/api/placeholder/120/120",
+      name: "Emanate",
+      logo: "/assets/Startup/Emanate.png.jpeg",
       tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
-    }
+    },
+    {
+      name: "FAM-LY2",
+      logo: "/assets/Startup/FAM-LY2.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Farmunity",
+      logo: "/assets/Startup/Farmunity.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+   
+
+
   ];
 
   const secondRowLogos: LogoItem[] = [
     {
-      name: "Simulyst",
-      logo: "/api/placeholder/120/120",
-      tagline: "Empower.Engage.Evolve",
+      name: "Gravityos",
+      logo: "/assets/Startup/gravityos2logo.png.png",
+      tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
     },
     {
-      name: "EzyWrit",
-      logo: "/api/placeholder/120/120",
-      tagline: "We make your assignments, you make your future.",
+      name: "Keplr",
+      logo: "/assets/Startup/Keplr.png.png",
+      tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
     },
     {
-      name: "Dhvani",
-      logo: "/api/placeholder/120/120",
-      tagline: "Embrace Serenity Embrace Silence",
+      name: "Kick off",
+      logo: "/assets/Startup/Kick off.png.jpg",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "LB",
+      logo: "/assets/Startup/LB.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+   
+  
+    {
+      name: "Luxicab",
+      logo: "/assets/Startup/Luxicab.png.jpg",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+
+    {
+      name: "Mystig",
+      logo: "/assets/Startup/Mystig.png.jpg",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Ok Health",
+      logo: "/assets/Startup/Ok Health.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Pocketship",
+      logo: "/assets/Startup/Pocketship.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+     {
+      name: "Quantum",
+      logo: "/assets/Startup/Quantum.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Sarthi",
+      logo: "/assets/Startup/sarthi.png.jpg",
+      tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
     },
     {
       name: "Shatranj",
-      logo: "/api/placeholder/120/120",
-      tagline: "Checkmate Pays OFF",
+      logo: "/assets/Startup/Shatranj.png.jpeg",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Shop linker",
+      logo: "/assets/Startup/shop linker.png.jpg",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Simulyst",
+      logo: "/assets/Startup/simulyst.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "Tech date",
+      logo: "/assets/Startup/Tech date.png.png",
+      tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
     },
     {
       name: "ValidX",
-      logo: "/api/placeholder/120/120",
-      tagline: "Reach Before You Reach",
+      logo: "/assets/Startup/validX .png.png",
+      tagline: "Streets United Possibilities Unlimited",
       color: "#FF0000"
-    }
+    },
+    {
+      name: "Winzbee",
+      logo: "/assets/Startup/Winzbee.png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    {
+      name: "WM",
+      logo: "/assets/Startup/WM .png.png",
+      tagline: "Streets United Possibilities Unlimited",
+      color: "#FF0000"
+    },
+    
   ];
 
 
