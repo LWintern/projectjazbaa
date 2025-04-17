@@ -203,7 +203,7 @@ const StatisticsSection = () => {
         <div className="relative z-10">
           <div className="grid gap-6 md:gap-8 lg:gap-10">            
             {/* Stats Cards */}
-            <div className="space-y-8 md:space-y-12">
+            <div className="space-y-8 md:space-y-2">
               {statisticsData.map((stat, index) => (
                 <StatCard key={index} stat={stat} index={index} />
               ))}
