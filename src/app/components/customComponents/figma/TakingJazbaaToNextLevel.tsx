@@ -1,6 +1,8 @@
 // components/team-grid.tsx
+"use client"
 import { cn } from "@/lib/utils";
 import Image from "next/legacy/image";
+import { useState, useEffect } from "react";
 
 interface TeamMember {
   id: string;
@@ -12,21 +14,57 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "1",
-    name: "Name",
-    jobTitle: "Job title",
-    imageUrl: "/assets/transformation/WhatsApp Image 2024-03-16 at 1.31.04 PM.jpeg", // Replace with your image paths
+    name: "Mr Amit Shah",
+    jobTitle: "Minister of Home Affairs of India",
+    imageUrl: "/assets/investors/mr amit shah.jpeg",
   },
   {
     id: "2",
-    name: "Name",
-    jobTitle: "Job title",
-    imageUrl: "/team-2.jpg",
+    name: "Mr Aroon Purie",
+    jobTitle: "Aaj Tak|India Today,Owner",
+    imageUrl: "/assets/investors/mr aroon purie.jpeg",
   },
   {
     id: "3",
-    name: "Name",
-    jobTitle: "Job title",
-    imageUrl: "/team-3.jpg",
+    name: "Mr P.Chidambaram",
+    jobTitle: "Former Finance Minister",
+    imageUrl: "/assets/investors/Mr p.chidambram.jpeg",
+  },
+  {
+    id: "4",
+    name: "Mr Sudhir Choudhary",
+    jobTitle: "Aaj Tak,Editor",
+    imageUrl: "/assets/investors/mr sudhir choudhary.jpeg",
+  },
+  {
+    id: "5",
+    name: "Mr Mohan Yadav",
+    jobTitle: "CM of Madhya Pradesh",
+    imageUrl: "/assets/investors/mr. mohan yadav.jpeg",
+  },
+  {
+    id: "6",
+    name: "Ms Sweta Singh",
+    jobTitle: "Indian Journalist & Newscaster",
+    imageUrl: "/assets/investors/ms sweta singh.jpeg",
+  },
+  {
+    id: "7",
+    name: "Mr Narayan Murthy",
+    jobTitle: "Founder of Infosys",
+    imageUrl: "/assets/investors/narayan murthy.jpeg",
+  },
+  {
+    id: "8",
+    name: "Sadhguru Ji",
+    jobTitle: "Spiritual Leader",
+    imageUrl: "/assets/investors/sadhgurujii.jpeg",
+  },
+  {
+    id: "9",
+    name: "Mrs Sudha Murty",
+    jobTitle: "Member of Rajya Sabha",
+    imageUrl: "/assets/investors/sudha murty.jpeg",
   },
 ];
 
@@ -81,19 +119,54 @@ const TeamMemberCard = ({
 );
 
 export function TeamGrid() {
+  // State to track the currently displayed team members
+  const [displayedMembers, setDisplayedMembers] = useState({
+    featured: teamMembers[0],
+    topRight: teamMembers[1],
+    bottomRight: teamMembers[2]
+  });
+
+  // Counter to keep track of which set of images to show
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    // Function to rotate the displayed team members
+    const rotateMembers = () => {
+      const nextIndex = (currentIndex + 1) % Math.ceil(teamMembers.length / 3);
+      
+      // Calculate indices for the three positions
+      const featuredIndex = (nextIndex * 3) % teamMembers.length;
+      const topRightIndex = (featuredIndex + 1) % teamMembers.length;
+      const bottomRightIndex = (featuredIndex + 2) % teamMembers.length;
+      
+      setDisplayedMembers({
+        featured: teamMembers[featuredIndex],
+        topRight: teamMembers[topRightIndex],
+        bottomRight: teamMembers[bottomRightIndex]
+      });
+      
+      setCurrentIndex(nextIndex);
+    };
+
+    // Set up the interval to rotate members every 5 seconds
+    const intervalId = setInterval(rotateMembers, 4000);
+    
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
+
   return (
     <div className="container bg-black mx-auto px-4 py-6 sm:p-6">
-       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
-          TAKING JAZBAA TO NATIONAL LEVEL
-        </h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
+        TAKING JAZBAA TO NATIONAL LEVEL
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-     
         {/* Left large card */}
         <div className="relative">
           <TeamMemberCard
-            imageUrl={teamMembers[0].imageUrl}
-            name={teamMembers[0].name}
-            jobTitle={teamMembers[0].jobTitle}
+            imageUrl={displayedMembers.featured.imageUrl}
+            name={displayedMembers.featured.name}
+            jobTitle={displayedMembers.featured.jobTitle}
             className="h-[300px] sm:h-[400px] md:h-[550px]"
             isMain
           />
@@ -101,15 +174,21 @@ export function TeamGrid() {
 
         {/* Right column cards */}
         <div className="flex flex-col gap-6 md:h-[550px]">
-          {teamMembers.slice(1).map((member) => (
-            <TeamMemberCard
-              key={member.id}
-              imageUrl={member.imageUrl}
-              name={member.name}
-              jobTitle={member.jobTitle}
-              className="md:flex-1"
-            />
-          ))}
+          {/* Top right card */}
+          <TeamMemberCard
+            imageUrl={displayedMembers.topRight.imageUrl}
+            name={displayedMembers.topRight.name}
+            jobTitle={displayedMembers.topRight.jobTitle}
+            className="md:flex-1"
+          />
+          
+          {/* Bottom right card */}
+          <TeamMemberCard
+            imageUrl={displayedMembers.bottomRight.imageUrl}
+            name={displayedMembers.bottomRight.name}
+            jobTitle={displayedMembers.bottomRight.jobTitle}
+            className="md:flex-1"
+          />
         </div>
       </div>
     </div>
