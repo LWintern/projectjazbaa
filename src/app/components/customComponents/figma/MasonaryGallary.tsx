@@ -134,67 +134,67 @@ export default function EnhancedMasonryGallery() {
       className: "h-[400px]", // Tall
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/Asset_1[1].png",
       alt: "Group photo",
       className: "h-[200px]", // Short
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/DSC02498.JPG",
       alt: "JAZBAA sign",
       className: "h-[300px]", // Medium
     },
     {
-      src: "/placeholder.svg?height=400&width=300",
+      src: "/assets/gallery/DSC02507.JPG",
       alt: "People at event 2",
       className: "h-[400px]", // Tall
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/DSC03396.JPG",
       alt: "Couple photo",
       className: "h-[200px]", // Short
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/DSC08988.JPG",
       alt: "People hugging",
       className: "h-[400px]", // Tall
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/IMG_5477.JPG",
       alt: "Group with JAZBAA sign",
       className: "h-[300px]", // Medium
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/IMG_5691.JPG",
       alt: "Two people standing",
       className: "h-[200px]", // Short
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/IMG_5851.JPG",
       alt: "JAZBAA 3.0 stage",
       className: "h-[300px]", // Medium
     },
     {
-      src: "/placeholder.svg?height=200&width=300",
+      src: "/assets/gallery/IMG_6034.JPG",
       alt: "Audience",
       className: "h-[400px]", // Tall
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/IMG_6227.JPG",
       alt: "Award ceremony",
       className: "h-[200px]", // Short
     },
     {
-      src: "/placeholder.svg?height=300&width=300",
+      src: "/assets/gallery/IMG_6421.JPG",
       alt: "Trophy presentation",
       className: "h-[300px]", // Medium
     },
     {
-      src: "/placeholder.svg?height=400&width=300",
+      src: "/assets/gallery/IMG_6431.JPG",
       alt: "Person in dress",
       className: "h-[400px]", // Tall
     },
     {
-      src: "/placeholder.svg?height=400&width=300",
+      src: "/assets/gallery/IMG_6478 (1).JPG",
       alt: "Person with camera",
       className: "h-[300px]", // Medium
     },
