@@ -70,37 +70,37 @@ export default function InvestorsSection() {
     {
       src: "/assets/investors/Artboard 1 copy 13.png",
       alt: "Prairie dog",
-      position: "up",
+      position: "down",
       bgColor: "bg-yellow-200"
     },
     {
       src: "/assets/investors/Artboard 1 copy 14.png",
       alt: "Prairie dog",
-      position: "down",
+      position: "up",
       bgColor: "bg-yellow-200"
     },
     {
       src: "/assets/investors/Artboard 1 copy 15.png",
       alt: "Prairie dog",
-      position: "up",
+      position: "down",
       bgColor: "bg-yellow-200"
     },
     {
       src: "/assets/investors/Artboard 1 copy 16.png",
       alt: "Prairie dog",
-      position: "down",
+      position: "up",
       bgColor: "bg-yellow-200"
     },
     {
       src: "/assets/investors/Artboard 1 copy.png",
       alt: "Prairie dog",
-      position: "up",
+      position: "down",
       bgColor: "bg-yellow-200"
     },
     {
       src: "/assets/investors/Artboard 1.png",
       alt: "Prairie dog",
-      position: "down",
+      position: "up",
       bgColor: "bg-yellow-200"
     },
   ]

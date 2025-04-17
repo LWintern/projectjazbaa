@@ -13,7 +13,7 @@ const StatisticsSection = () => {
             Jazbaa
           </h2>
           <div className="flex flex-wrap justify-center gap-80 text-gray-400 md:text-2xl text-xl">
-            <span className="">Jazbaa 1.0 2.0 3.0</span>
+            <span className="">Jazbaa 1.0 | 2.0 | 3.0</span>
             <span>Jazbaa 4.0</span>
           </div>
         </div>
