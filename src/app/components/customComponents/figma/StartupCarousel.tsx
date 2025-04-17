@@ -26,26 +26,26 @@ export default function StartupCarousel() {
 
   const firstRowLogos: LogoItem[] = [
     {
-      name: "Winzbee",
-      logo: "/api/placeholder/120/120",
+      name: "Advintage",
+      logo: "/assets/Startup/Advintage.png.png",
       tagline: "Link a in a blink",
       color: "#FF0000"
     },
     {
-      name: "KICK-OFF",
-      logo: "/api/placeholder/120/120",
+      name: "Bhadaas",
+      logo: "/assets/Startup/Bhadaas.png.png",
       tagline: "Where Dream Score & Talent Soar",
       color: "#FF0000"
     },
     {
-      name: "Emanate",
-      logo: "/api/placeholder/120/120",
+      name: "DainikVetan",
+      logo: "/assets/Startup/DainikVetan.png.jpeg",
       tagline: "Innovate connect, fund",
       color: "#FF0000"
     },
     {
-      name: "Little Bittle",
-      logo: "/api/placeholder/120/120",
+      name: "Emanate",
+      logo: "/assets/Startup/Emanate.png.jpeg",
       tagline: "My own insta.",
       color: "#FF0000"
     },
