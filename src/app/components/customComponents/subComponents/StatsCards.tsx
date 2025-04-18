@@ -1,4 +1,3 @@
-// components/subComponents/StatsCards.tsx
 "use client"
 
 import { motion } from "framer-motion";
@@ -32,40 +31,43 @@ export const StatCard = ({ stat, index }: StatCardProps) => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 h-full p-6 flex items-center justify-between">
-                    {/* Left Content */}
-                    <div className="flex flex-col justify-center">
-                        <div className="flex items-baseline gap-6">
-                            <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight">
-                                {stat.leftStat.number}
-                            </span>
-                            <div className="flex flex-col gap-2">
-                                <span className="text-2xl sm:text-3xl md:text-4xl font-light text-white/90">
-                                    {stat.leftStat.label}
+                <div className="relative z-10 h-full p-6 flex items-center">
+                    {/* Container for all content with proper spacing */}
+                    <div className="w-full flex items-center justify-between">
+                        {/* Left Content */}
+                        <div className="flex-1 pr-4">
+                            <div className="flex items-start gap-4">
+                                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
+                                    {stat.leftStat.number}
                                 </span>
-                                <span className="text-sm sm:text-base text-gray-300">
-                                    {stat.leftStat.description}
-                                </span>
+                                <div className="flex flex-col">
+                                    <span className="text-xl sm:text-2xl md:text-3xl font-light text-white/90">
+                                        {stat.leftStat.label}
+                                    </span>
+                                    <span className="text-sm text-gray-300 mt-1">
+                                        {stat.leftStat.description}
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Vertical Red Line */}
-                    <div className="h-[80%] w-[2px] bg-red-500 mx-6 self-center" />
+                        {/* Centered Vertical Line */}
+                        <div className="h-[120px] w-[2px] bg-red-500 mx-8 flex-shrink-0" />
 
-                    {/* Right Content */}
-                    <div className="flex flex-col justify-center">
-                        <div className="flex items-baseline gap-6">
-                            <span className="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight">
-                                {stat.rightStat.number}
-                            </span>
-                            <div className="flex flex-col gap-2">
-                                <span className="text-2xl sm:text-3xl md:text-4xl font-light text-white/90">
-                                    {stat.rightStat.label}
+                        {/* Right Content */}
+                        <div className="flex-1 pl-4">
+                            <div className="flex items-start gap-4">
+                                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
+                                    {stat.rightStat.number}
                                 </span>
-                                <span className="text-sm sm:text-base text-gray-300">
-                                    {stat.rightStat.description}
-                                </span>
+                                <div className="flex flex-col">
+                                    <span className="text-xl sm:text-2xl md:text-3xl font-light text-white/90">
+                                        {stat.rightStat.label}
+                                    </span>
+                                    <span className="text-sm text-gray-300 mt-1">
+                                        {stat.rightStat.description}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
