@@ -26,8 +26,8 @@ export default function Home() {
   <ProcessFlow/>
   <AboutLinuxWorld ></AboutLinuxWorld>
   
-  {/* <JazbaaStats /> */}
-   
+  {/* <JazbaaStats />
+    */}
   
   
   
