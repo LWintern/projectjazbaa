@@ -1,4 +1,5 @@
 import Navbar from './components/customComponents/figma/Navbar'
+import Hero from './components/customComponents/figma/hero'
 import { TeamGrid } from './components/customComponents/figma/TakingJazbaaToNextLevel'
 import { TransformationStories } from './components/customComponents/figma/TransformationStories'
 import ProcessFlow from './components/customComponents/figma/ProcessFlow'
@@ -17,6 +18,7 @@ export default function Home() {
    <>
 
   <Navbar />
+  <Hero />
   <StatisticsSection />
   <StartupCarousel/>
   <EnhancedMasonryGallery />
