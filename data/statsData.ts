@@ -16,67 +16,55 @@ export interface StatItem {
 export const statisticsData: StatItem[] = [
   {
       leftStat: {
-          number: "15+",
-          label: "Editions",
-          description: "Successfully completed editions"
+          number: "65+",
+          label: "Top-Notch Angel Investors",
+          description: "from across the globe",
       },
       rightStat: {
-          number: "10K+",
-          label: "Participants",
-          description: "Across multiple platforms"
+          number: "50+",
+          label: "Early-Stage Investors",
+          description: "With Angels & VCs as well at JAZBAA 4.0", 
       },
       image: "/assets/stats/DSC02620[1].jpg"
   },
   {
       leftStat: {
-          number: "1.5M+",
-          label: "Connections",
-          description: "Global network reach"
+          number: "133+",
+          label: "Statups Showcased",
+          description: "Unbelievable was the feedback from the investors to these 89+ startups,"
       },
       rightStat: {
-          number: "500K+",
-          label: "Engagements",
-          description: "Active community interactions"
+          number: "500+",
+          label: "Startups Would Be",
+          description: "Showcased by our Summer Interns this year at JAZBAA 4.0",
       },
       image: "/images/stats-bg-2.jpg"
   },
   {
       leftStat: {
-          number: "1000+",
-          label: "Sessions",
-          description: "Interactive workshops"
+          number: "10+",
+          label: "Sectors Covered",
+          description: "Healthcare,Education,Logistics & Transportation,Agriculture,Consumer Products & many more"
       },
       rightStat: {
-          number: "200+",
-          label: "Mentors",
-          description: "Expert guidance worldwide"
+          number: "10+",
+          label: "Sectors",
+          description: "Covered this year without leaving any stone untouched at JAZBAA 4.0"
       },
       image: "/images/stats-bg-3.jpg"
   },
   {
       leftStat: {
-          number: "50+",
-          label: "Countries",
-          description: "Global presence"
+          number: "15+",
+          label: "Technologies Covered",
+          description: "In these Startups including Generative AIOps |ML|Mobile Based|Cloud|Devops|Full stack development & many more"
       },
       rightStat: {
-          number: "100+",
-          label: "Partners",
-          description: "International collaborations"
+          number: "15+",
+          label: "Technologies will be used", 
+          description: "In these Startups inc. Generative AIOps |ML|Mobile Based|Cloud|Devops|Full stack development & many more"
       },
       image: "/images/stats-bg-4.jpg"
   },
-  {
-      leftStat: {
-          number: "100K+",
-          label: "Users",
-          description: "Active platform users"
-      },
-      rightStat: {
-          number: "25K+",
-          label: "Projects",
-          description: "Successfully completed"
-      },
-      image: "/images/stats-bg-5.jpg"
-  }
+  
 ];
