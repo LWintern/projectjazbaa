@@ -6,7 +6,7 @@ export default function HeroSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/70">
         <img 
-          src="/assets/Artboard 1 copy 2 (1).jpg" 
+          src="/assets/Artboard 1 copy 2 (2).jpg" 
           alt="Hero background" 
           className="w-full h-full object-cover" 
         />
