@@ -99,7 +99,7 @@ const ProcessCard = ({
             {icon}
           </div>
           <div className="p-2 sm:p-4 text-center">
-            <h3 className="font-semibold text-xs sm:text-sm">{title}</h3>
+            <h3 className="font-semibold text-xs text-white sm:text-sm">{title}</h3>
           </div>
         </CardContent>
       </Card>

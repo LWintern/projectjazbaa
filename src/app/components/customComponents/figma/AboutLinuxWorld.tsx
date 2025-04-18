@@ -3,26 +3,27 @@ import React from 'react';
 export default function AIInnovationPage() {
   return (
     <div
-      className="relative min-h-screen bg-black text-white flex flex-col items-center justify-start py-12 px-4"
+    className="relative min-h-screen bg-black text-white flex flex-col items-center justify-start py-12 px-4"
+    style={{
+      backgroundImage: "url('/assets/logo_LW.png')",
+      backgroundSize: '800px', // medium size
+      backgroundPosition: 'bottom right', // right and vertically centered
+      backgroundRepeat: 'no-repeat',
+    }}
+  >
+    {/* Dark overlay to enhance readability */}
+    <div className="absolute inset-0 bg-black bg-opacity-80 z-0" />
+  
+    {/* Background dots pattern */}
+    <div
+      className="absolute inset-0 opacity-30 pointer-events-none z-0"
       style={{
-        backgroundImage: "url('/assets/LW-logo-white.png')", // change this path to your logo image
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage:
+          'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
+        backgroundSize: '30px 30px',
       }}
-    >
-      {/* Dark overlay to enhance readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-80 z-0" />
-
-      {/* Background dots pattern */}
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none z-0"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
-          backgroundSize: '30px 30px',
-        }}
-      ></div>
+    ></div>
+  
 
       {/* Main content */}
       <div className="container max-w-6xl z-10 relative">
@@ -62,7 +63,7 @@ export default function AIInnovationPage() {
         <div className="flex flex-col md:flex-row gap-8 mt-8">
           {/* Vision Card */}
           <div className="flex-1 bg-black bg-opacity-50 border border-gray-800 rounded-lg p-6 text-left">
-            <h3 className="text-2xl text-rose-300 text-center mb-4">Our Vision</h3>
+            <h3 className="text-2xl text-rose-300 text-center mb-4">The Present</h3>
 
             <div className="flex justify-center items-center my-4">
               <div className="w-2 h-2 rounded-full bg-yellow-300"></div>
@@ -72,27 +73,16 @@ export default function AIInnovationPage() {
 
             <div className="space-y-4">
               <p>
-                To establish India as the global hub of AI innovation—where talent,
-                technology, and tradition shape the future.
+                Transforming Engineers into the Technology Creators by developing an entrepreneurial mindset and inclating technical competencies to innovate and produce products accepted globally.
               </p>
 
-              <p>
-                From Aryabhata&apos;s legacy to today&apos;s AI revolution, India has
-                always been a beacon of intellectual leadership. Now, we aim not just
-                to adopt AI but to lead its evolution, leveraging our vast talent and
-                ingenuity to drive world-changing breakthroughs.
-              </p>
 
-              <p>
-                From India to the world, we are igniting the next technological AI
-                revolution.
-              </p>
             </div>
           </div>
 
           {/* Mission Card */}
           <div className="flex-1 bg-black bg-opacity-50 border border-gray-800 rounded-lg p-6 text-left">
-            <h3 className="text-2xl text-amber-300 text-center mb-4">Our Mission</h3>
+            <h3 className="text-2xl text-amber-300 text-center mb-4">The Future</h3>
 
             <div className="flex justify-center items-center my-4">
               <div className="w-2 h-2 rounded-full bg-yellow-300"></div>
@@ -102,18 +92,10 @@ export default function AIInnovationPage() {
 
             <div className="space-y-4">
               <p>
-                To transform India into a global AI leader by bridging the gap between
-                raw talent and world-class impact. We build cutting-edge AI solutions
-                rooted in Indian ingenuity, empowering individuals and institutions
-                through upskilling, industry-aligned training, and real-world
-                applications.
+                We will be at the foefront of the India AI Mission,driving innovation and technological advancement in the field of Artificial Intelligence.
               </p>
-
               <p>
-                From uncovering hidden talent to creating global AI pipelines, we
-                ensure the next breakthroughs don&apos;t just come to India—they come
-                from India. Together, we are shaping a future where India defines the
-                rules of innovation and stands tall as a global AI powerhouse.
+                Soon Indians to be known as "Creators in the Technology Space"
               </p>
             </div>
           </div>
