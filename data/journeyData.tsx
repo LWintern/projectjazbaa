@@ -79,7 +79,7 @@ export const contactInfo: ContactInfo = {
 
 export const cardData: CardData[] = [
   {
-    icon: <Lightbulb className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
+    icon: <Lightbulb className="w-16 h-16 sm:w-16 sm:h-16 text-emerald-600" />,
     title: "Learn",
     position: 0,
     customPosition: {
@@ -103,7 +103,7 @@ export const cardData: CardData[] = [
     }
   },
   {
-    icon: <Code className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
+    icon: <Code className="w-20 h-20 sm:w-20 sm:h-2 text-emerald-600" />,
     title: "Build",
     position: 1,
     customPosition: {
@@ -128,7 +128,7 @@ export const cardData: CardData[] = [
     }
   },
   {
-    icon: <PresentationIcon className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />,
+    icon: <PresentationIcon className="w-16 h-16 sm:w-16 sm:h-16 text-emerald-600" />,
     title: "Present",
     position: 2,
     customPosition: {

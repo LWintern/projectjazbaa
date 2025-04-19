@@ -114,7 +114,7 @@ export default function InvestorsSection() {
         <div className="max-w-6xl mx-auto px-4 py-4"> {/* Increased padding */}
           <div className="bg-black rounded-lg p-8 text-white h-full">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-10"> {/* Increased margin */}
-              Investors & dignitaries @ jazbaa 1.0 | 2.0 | 3.0
+              INVESTORS & DIGNITARIES @ JAZBAA 1.0 | 2.0 | 3.0
             </h3>
 
             {/* Added min-h-[600px] for minimum height */}

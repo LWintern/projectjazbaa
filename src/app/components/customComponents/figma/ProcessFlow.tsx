@@ -99,7 +99,7 @@ const ProcessCard = ({
             {icon}
           </div>
           <div className="p-2 sm:p-4 text-center">
-            <h3 className="font-semibold text-xs sm:text-sm">{title}</h3>
+            <h3 className="font-semibold text-xs text-white sm:text-sm">{title}</h3>
           </div>
         </CardContent>
       </Card>
@@ -191,7 +191,7 @@ export default function CareerSchools() {
 
   return (
     <div className="relative w-full h-[950px] md:min-h-screen lg:min-h-screen">
-      <div className="absolute top-0 left-0 w-full h-[80%] bg-[#ff0000] ">
+      <div className="absolute top-0 left-0 w-full h-[80%] bg-red-800 ">
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -209,7 +209,7 @@ export default function CareerSchools() {
       <div className="relative z-10 w-full py-8 px-4">
         <div className="text-center mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-            Our Training Programs
+            OUR TRAINING PROGRAMS
           </h1>
           <p className="text-xs sm:text-sm md:text-base text-blue-200">
             Comprehensive Linux and cloud computing education for the modern tech landscape
