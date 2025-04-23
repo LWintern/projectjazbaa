@@ -27,7 +27,7 @@ const cardConfigs: CardConfig[] = [
       {
         title: "DEEPAK MAURYA ",
         description: "FOUNDER OF STARTUP - POKET SHIP",
-        imageUrl: "/card1-image1.jpg"
+        imageUrl: "/assets/stats/poketship.jpg"
       },
     
       // Add more content items for card 1
@@ -40,7 +40,7 @@ const cardConfigs: CardConfig[] = [
       {
         title: "LAKSHYA JAIN",
         description: "FOUNDER OF STARTUP - KEPLR",
-        imageUrl: "/card2-image1.jpg"
+        imageUrl: "/assets/stats/keplr.jpg"
       },
     
       // Add more content items for card 2
@@ -53,7 +53,7 @@ const cardConfigs: CardConfig[] = [
       {
         title: "ABHISHEK KHANDAL",
         description: "Summer Intern listed at Forbes 30 under 30",
-        imageUrl: "/card3-image1.jpg"
+        imageUrl: "/assets/stats/Abhishek.jpg"
       },
      
       // Add more content items for card 3
@@ -93,7 +93,7 @@ const StoryCard = ({
           </div>
         )}
         
-        <div className="relative h-[250px] w-full bg-red-100">
+        <div className="relative h-[350px] w-full bg-red-100">
           <Image
             src={content.imageUrl}
             alt={content.title}
@@ -104,7 +104,7 @@ const StoryCard = ({
         </div>
 
         {(config.position === 'top' || config.position === 'bottom') && (
-          <div className="text-center p-4 bg-white h-[250px] flex flex-col justify-center">
+          <div className="text-center p-4 bg-white h-[300px] flex flex-col justify-center">
             <ChevronDown className="w-6 h-6 mx-auto mb-2 text-gray-600" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{content.title}</h3>
             <p className="text-sm text-gray-600">{content.description}</p>
