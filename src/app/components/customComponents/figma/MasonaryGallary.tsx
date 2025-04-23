@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 interface GalleryImage {
   src: string
@@ -118,26 +118,23 @@ export default function EnhancedMasonryGallery() {
 
   const handleImageClick = (image: GalleryImage) => {
     setSelectedImage(image)
-    // Prevent scrolling when modal is open
     document.body.style.overflow = 'hidden'
   }
 
   const closeFullScreen = () => {
     setSelectedImage(null)
-    // Re-enable scrolling when modal is closed
     document.body.style.overflow = 'auto'
   }
 
-  // Handle keyboard events for accessibility
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      closeFullScreen()
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeFullScreen()
+      }
     }
-  }
 
-  // Add keyboard event listener
-  useState(() => {
     window.addEventListener('keydown', handleKeyDown)
+    
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
@@ -149,6 +146,8 @@ export default function EnhancedMasonryGallery() {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
           JAZBAA 1.0| 2.0 | 3.0 EVENT GALLERY
         </h2>
+        
+        {/* Gallery Grid */}
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {galleryImages.map((image, index) => (
             <div 
@@ -194,6 +193,7 @@ export default function EnhancedMasonryGallery() {
                 )}
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
               />
+              
               {/* Hover Overlay */}
               <div 
                 className={cn(
@@ -201,6 +201,7 @@ export default function EnhancedMasonryGallery() {
                   hoveredIndex === index ? "opacity-100" : "opacity-0"
                 )}
               />
+              
               {/* Image Caption */}
               <div 
                 className={cn(
@@ -225,8 +226,9 @@ export default function EnhancedMasonryGallery() {
         >
           <div 
             className="relative w-full h-full max-w-[90vw] max-h-[90vh] m-auto"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image
+            onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button 
               className="absolute top-4 right-4 text-white text-xl bg-black bg-opacity-50 w-10 h-10 rounded-full flex items-center justify-center z-50 hover:bg-opacity-75 transition-all duration-200"
               onClick={closeFullScreen}
@@ -234,6 +236,8 @@ export default function EnhancedMasonryGallery() {
             >
               ×
             </button>
+
+            {/* Full Screen Image */}
             <div className="relative w-full h-full">
               <Image
                 src={selectedImage.src}
@@ -245,6 +249,8 @@ export default function EnhancedMasonryGallery() {
                 quality={100}
               />
             </div>
+
+            {/* Full Screen Caption */}
             <div className="absolute bottom-4 left-0 right-0 text-center text-white bg-black bg-opacity-50 py-2">
               <p className="text-lg font-medium">{selectedImage.alt}</p>
             </div>
