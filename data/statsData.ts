@@ -38,7 +38,7 @@ export const statisticsData: StatItem[] = [
           label: "Startups Would Be",
           description: "Showcased by our Summer Interns this year at JAZBAA 4.0",
       },
-      image: "/images/stats-bg-2.jpg"
+      image: "/assets/stats/DSC_2974.JPG"
   },
   {
       leftStat: {
@@ -51,7 +51,7 @@ export const statisticsData: StatItem[] = [
           label: "Sectors",
           description: "Covered this year without leaving any stone untouched at JAZBAA 4.0"
       },
-      image: "/images/stats-bg-3.jpg"
+      image: "/assets/stats/DSC_3405.JPG"
   },
   {
       leftStat: {
@@ -64,7 +64,7 @@ export const statisticsData: StatItem[] = [
           label: "Technologies will be used", 
           description: "In these Startups inc. Generative AIOps |ML|Mobile Based|Cloud|Devops|Full stack development & many more"
       },
-      image: "/images/stats-bg-4.jpg"
+      image: "/assets/stats/IMG_5714.JPG"
   },
   
 ];
