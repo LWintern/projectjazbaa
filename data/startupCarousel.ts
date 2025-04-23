@@ -4,19 +4,19 @@ import { LogoItem } from '../types/startupCarousel';
 export const firstRowLogos: LogoItem[] = [
   {
     name: "Advintage",
-    logo: "/assets/Startup/Advintage.png",
+    logo: "/assets/Startup/Advintage.png.png",
     tagline: "Link a in a blink",
     color: "#FF0000"
   },
   {
     name: "Bhadaas",
-    logo: "/assets/Startup/Bhadaas.png",
+    logo: "/assets/Startup/Bhadaas.png.png",
     tagline: "Where Dream Score & Talent Soar",
     color: "#FF0000"
   },
   {
     name: "DainikVetan",
-    logo: "/assets/Startup/DainikVetan.jpeg",
+    logo: "/assets/Startup/DainikVetan.png.jpeg",
     tagline: "Innovate connect, fund",
     color: "#FF0000"
   },
