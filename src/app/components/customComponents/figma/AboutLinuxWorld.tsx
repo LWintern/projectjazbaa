@@ -26,7 +26,7 @@ export default function AIInnovationPage() {
   
 
       {/* Main content */}
-      <div className="container max-w-6xl z-10 relative">
+      <div className="container max-w-6xl z-10 relative" id='AboutLinuxWorld'>
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-10">

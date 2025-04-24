@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <a href="#Hero" className="flex items-center space-x-2">
           <Image
-            src=""
+            src="/assets/LW-white.png"
             alt="Logo"
             width={64} // You can set the width
             height={32} // You can set the height
@@ -69,24 +69,24 @@ const Navbar: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#mentor" className="text-white hover:text-[#ff0000]">
+              <a href="#AboutLinuxWorld" className="text-white hover:text-[#ff0000]">
               About Us 
 
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#trainingcontent" className="text-white hover:text-[#ff0000]">
               Training Content
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="#projects" className="text-white hover:text-[#ff0000]">
               Projects
               </a>
-            </li>
+            </li> */}
             <li>
-              <a href="#placements" className="text-white hover:text-[#ff0000]">
-              Placements 
+              <a href="#investors" className="text-white hover:text-[#ff0000]">
+              Investors
               </a>
             </li>
             <li>

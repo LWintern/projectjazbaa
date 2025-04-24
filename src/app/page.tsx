@@ -19,14 +19,16 @@ export default function Home() {
 
   <Navbar />
   <Hero />
+
   <StatisticsSection />
   <StartupCarousel/>
   <EnhancedMasonryGallery />
   <TeamGrid />
 <InvestorsSection />
   <TransformationStories />
-  <ProcessFlow/>
   <AboutLinuxWorld ></AboutLinuxWorld>
+  <ProcessFlow/>
+  
   
   {/* <JazbaaStats />
     */}
