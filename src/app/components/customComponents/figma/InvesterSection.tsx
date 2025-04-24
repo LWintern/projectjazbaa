@@ -130,12 +130,12 @@ export default function InvestorsSection() {
               </div>
 
               {/* Carousel container with increased height */}
-              <div className="md:w-2/3 overflow-hidden h-[440px]"> {/* Increased height */}
+              <div className="md:w-2/3 overflow-hidden md:h-[440px] lg:h-[440px] h-[480px]"> {/* Increased height */}
                 <div className="flex animate-carousel items-center h-full"> {/* Added h-full */}
                   {duplicatedImages.map((image, index) => (
                     <div
                       key={`image-${index}`}
-                      className={`relative w-[120px] flex-shrink-0 h-[400px] md:w-[110px] md:h-[290px] overflow-hidden rounded-[60px] mx-2 cursor-pointer transition-transform hover:scale-105 
+                      className={`relative w-[120px] flex-shrink-0 h-[300px] md:w-[110px] md:h-[290px] overflow-hidden rounded-[60px] mx-2 cursor-pointer transition-transform hover:scale-105 
                       ${image.position === 'up' ? 'transform -translate-y-16' : 'transform translate-y-16'}
                       ${image.bgColor}`}
                       onClick={() => setSelectedImage(image.src)}
