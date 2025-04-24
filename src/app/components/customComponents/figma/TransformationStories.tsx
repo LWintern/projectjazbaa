@@ -18,7 +18,8 @@ interface CardConfig {
   contents: StoryContent[]
 }
 
-// Define content for each card position
+
+
 const cardConfigs: CardConfig[] = [
   {
     id: 1,
@@ -29,8 +30,6 @@ const cardConfigs: CardConfig[] = [
         description: "FOUNDER OF STARTUP - POKET SHIP",
         imageUrl: "/assets/stats/poketship.jpg"
       },
-    
-      // Add more content items for card 1
     ]
   },
   {
@@ -42,8 +41,6 @@ const cardConfigs: CardConfig[] = [
         description: "FOUNDER OF STARTUP - KEPLR",
         imageUrl: "/assets/stats/keplr.jpg"
       },
-    
-      // Add more content items for card 2
     ]
   },
   {
@@ -55,18 +52,18 @@ const cardConfigs: CardConfig[] = [
         description: "Summer Intern listed at Forbes 30 under 30",
         imageUrl: "/assets/stats/Abhishek.jpg"
       },
-     
-      // Add more content items for card 3
     ]
   }
 ]
 
 const StoryCard = ({ 
   config,
-  className 
+  className,
+  isMobile 
 }: { 
   config: CardConfig
   className?: string
+  isMobile: boolean
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -85,14 +82,16 @@ const StoryCard = ({
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <div className="flex flex-col">
-        {config.position === 'middle' && (
+        {/* Content Section - Top */}
+        {(!isMobile && config.position === 'middle') && (
           <div className="text-center p-4 bg-white h-[250px] flex flex-col justify-center">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{content.title}</h3>
             <p className="text-sm text-gray-600">{content.description}</p>
-            <ChevronDown className="w-6 h-6 mx-auto mt-2  text-gray-600" />
+            <ChevronDown className="w-6 h-6 mx-auto mt-2 text-gray-600" />
           </div>
         )}
         
+        {/* Image Section */}
         <div className="relative h-[350px] w-full bg-red-100">
           <Image
             src={content.imageUrl}
@@ -103,9 +102,10 @@ const StoryCard = ({
           />
         </div>
 
-        {(config.position === 'top' || config.position === 'bottom') && (
+        {/* Content Section - Bottom */}
+        {(isMobile || config.position === 'top' || config.position === 'bottom') && (
           <div className="text-center p-4 bg-white h-[300px] flex flex-col justify-center">
-            <ChevronDown className="w-6 h-6 mx-auto mb-2 text-gray-600" />
+            {!isMobile && <ChevronDown className="w-6 h-6 mx-auto mb-2 text-gray-600" />}
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{content.title}</h3>
             <p className="text-sm text-gray-600">{content.description}</p>
           </div>
@@ -116,6 +116,19 @@ const StoryCard = ({
 }
 
 export function TransformationStories() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <div className="w-full bg-black py-12" id='careertransformation'>
       <div className="container mx-auto px-4">
@@ -123,13 +136,18 @@ export function TransformationStories() {
           TRANSFORMATION STORIES
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 max-w-6xl mx-auto">
           {cardConfigs.map((config) => (
             <div 
               key={config.id}
-              className="transform transition-all duration-500"
+              className={`transform transition-all duration-500 ${
+                isMobile ? 'mb-8' : ''
+              }`}
             >
-              <StoryCard config={config} />
+              <StoryCard 
+                config={config} 
+                isMobile={isMobile}
+              />
             </div>
           ))}
         </div>
